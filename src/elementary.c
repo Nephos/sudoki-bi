@@ -5,47 +5,49 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 21:55:42 2014 poulet_a
-** Last update Fri Feb 28 23:51:52 2014 poulet_a
+** Last update Sat Mar  1 00:02:17 2014 poulet_a
 */
 
-unsigned char	n_not_in_line(unsigned char grid[9][9],
-			      unsigned char y,
-			      unsigned char n)
+#include "ret.h"
+
+char	n_not_in_line(char grid[9][9],
+		      char y,
+		      char n)
 {
-  unsigned char	i;
+  char	i;
 
   i = 0;
   while (i < 9)
     {
-      RET_ONE_ZERO(grid[y][i] == n);
+      RET_ONE_ZERO((grid[y][i] == n));
       i++;
     }
   return (1);
 }
 
-unsigned char	n_not_in_column(unsigned char grid[9][9],
-				unsigned char x,
-				unsigned char n)
+char	n_not_in_column(char grid[9][9],
+			char x,
+			char n)
 {
-  unsigned char	i;
+  char	i;
 
   i = 0;
   while (i < 9)
     {
-      RET_ONE_ZERO(grid[i][x] == n);
+      RET_ONE_ZERO((grid[i][x] == n));
       i++;
     }
   return (1);
 }
 
-unsigned char	n_not_in_square(unsigned char grid[9][9],
-				unsigned char y,
-				unsigned char x,
-				unsigned char n)
+char	n_not_in_square(char grid[9][9],
+			char y,
+			char x,
+			char n)
 {
-  unsigned char	i;
-  unsigned char	py;
-  unsigned char	px;
+  char	i;
+  char	py;
+  char	px;
 
   y = y % 9;
   x = x / 9;
@@ -56,16 +58,16 @@ unsigned char	n_not_in_square(unsigned char grid[9][9],
     {
       py = y + i / 3;
       px = x + i % 3;
-      RET_ONE_ZERO(grid[py][px] == n);
+      RET_ONE_ZERO((grid[py][px] == n));
       i++;
     }
   return (1);
 }
 
-unsigned char	n_valid(unsigned char grid[9][9],
-			unsigned char y,
-			unsigned char x,
-			unsigned char n)
+char	n_valid(char grid[9][9],
+		char y,
+		char x,
+		char n)
 {
   if (n_not_in_square(grid, y, x, n)
       && n_not_in_line(grid, y, n)

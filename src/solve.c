@@ -5,8 +5,10 @@
 ** Login   <poulet_a@epitech.net>
 ** 
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Fri Feb 28 23:46:32 2014 poulet_a
+** Last update Fri Feb 28 23:54:29 2014 poulet_a
 */
+
+#include "elementary.h"
 
 char	valid_grid(char grid[9][9], char y, char x)
 {

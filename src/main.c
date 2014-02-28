@@ -12,7 +12,7 @@
 #include "ret.h"
 #include "get_next_line.h"
 
-char			read_grille(char tab[9][9]);
+char		read_grille(char tab[9][9]);
 
 int		main()
 {

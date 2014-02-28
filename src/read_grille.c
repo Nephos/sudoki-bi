@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Fri Feb 28 23:39:23 2014 ghukas_g
+** Last update Sat Mar  1 00:00:04 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -14,14 +14,12 @@
 #include "ret.h"
 #include "get_next_line.h"
 
-typedef unsigned char t_uchar;
-
 # define IS_NUM(nb)	(((nb) < '0' || (nb) > '9') ? (-1) : (0))
 
-char			check_line(char *line, char tab[9])
+char	check_line(char *line, char tab[9])
 {
-  t_uchar		i;
-  t_uchar		j;
+  char	i;
+  char	j;
 
   if (strncmp(line, "| ", 2) != 0)
     return (-1);
@@ -43,10 +41,10 @@ char			check_line(char *line, char tab[9])
   return((line[i - 1] == '|') ? (0) : (-1));
 }
 
-char			read_grille(char tab[9][9])
+char	read_grille(char tab[9][9])
 {
-  t_uchar		i;
-  char			*line;
+  char	i;
+  char	*line;
 
   RET_NULL_LONE((line = get_next_line(0)));
   if (strcmp(line, "|------------------|") != 0)
