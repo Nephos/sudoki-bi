@@ -18,4 +18,4 @@
 *.app
 
 *~
-bin/*
+bin/sudoki-bi

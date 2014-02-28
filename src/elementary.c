@@ -5,60 +5,71 @@
 ** Login   <poulet_a@epitech.net>
 ** 
 ** Started on  Fri Feb 28 21:55:42 2014 poulet_a
-** Last update Fri Feb 28 22:13:25 2014 poulet_a
+** Last update Fri Feb 28 23:48:13 2014 poulet_a
 */
 
-unsigned char	n_not_one_line(unsigned char grid[9][9],
-			       unsigned char line,
-			       unsigned char n)
+unsigned char	n_not_in_line(unsigned char grid[9][9],
+			      unsigned char y,
+			      unsigned char n)
 {
   unsigned char	i;
 
   i = 0;
   while (i < 9)
     {
-      RET_ONE_ZERO(grid[line][i] == n);
+      RET_ONE_ZERO(grid[y][i] == n);
       i++;
     }
   return (1);
 }
 
-unsigned char	n_not_one_column(unsigned char grid[9][9],
-				 unsigned char col,
-				 unsigned char n)
+unsigned char	n_not_in_column(unsigned char grid[9][9],
+				unsigned char x,
+				unsigned char n)
 {
   unsigned char	i;
 
   i = 0;
   while (i < 9)
     {
-      RET_ONE_ZERO(grid[i][col] == n);
+      RET_ONE_ZERO(grid[i][x] == n);
       i++;
     }
   return (1);
 }
 
-unsigned char	n_not_one_square(unsigned char grid[9][9],
-				 unsigned char x,
-				 unsigned char y,
-				 unsigned char n)
+unsigned char	n_not_in_square(unsigned char grid[9][9],
+				unsigned char y,
+				unsigned char x,
+				unsigned char n)
 {
   unsigned char	i;
-  unsigned char	px;
   unsigned char	py;
+  unsigned char	px;
 
-  x = x / 9;
   y = y % 9;
-  px = x;
+  x = x / 9;
   py = y;
+  px = x;
   i = 0;
   while (i < 9)
     {
-      px = x + i % 3;
       py = y + i / 3;
-      RET_ONE_ZERO(grid[px][py] == n);
+      px = x + i % 3;
+      RET_ONE_ZERO(grid[py][px] == n);
       i++;
     }
   return (1);
 }
 
+unsigned char	n_valid(unsigned char grid[9][9],
+			unsigned char y,
+			unsigned char x,
+			unsigned char n)
+{
+  if (n_not_in_square(grid, y, x, n)
+      && n_not_in_line(grid, y, n)
+      && n_not_in_column(grid, x, n))
+    return (1);
+  return (0);
+}
