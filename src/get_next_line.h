@@ -5,13 +5,14 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Sat Nov 16 17:19:38 2013 ghukas_g
-** Last update Wed Dec  4 12:56:59 2013 ghukas_g
+** Last update Fri Feb 28 22:05:08 2014 ghukas_g
 */
 
 #ifndef GET_NEXT_LINE_H_
  #define GET_NEXT_LINE_H_
 
 #define SIZE_BUFFER 5
+
 char *get_next_line(const int);
 
 #endif /* !GET_NEXT_LINE_H_ */
