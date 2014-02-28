@@ -11,14 +11,37 @@
 #include <stdio.h>
 #include "ret.h"
 #include "get_next_line.h"
+#include "solve.h"
 
-char		read_grille(char tab[9][9]);
+char	read_grid(char tab[9][9]);
 
-int		main()
+void	aff_grid(char grid[9][9])
 {
-  char		tab[9][9];
+  char	y;
+  char	x;
 
-  if ((read_grille(tab)) == -1)
+  y = 0;
+  while (y < 9)
+    {
+      x = 0;
+      printf("%d : ",y);
+      while (x < 9)
+	{
+	  printf("%d ", grid[y][x]);
+	  x++;
+	}
+      printf("\n");
+      y++;
+    }
+}
+
+int	main()
+{
+  char	tab[9][9];
+
+  if ((read_grid(tab)) == -1)
     return (-1);
+  valid_grid(tab, 0, 0);
+  aff_grid(tab);
   return (0);
 }
