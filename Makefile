@@ -1,11 +1,11 @@
 ##
 ## Makefile for  in /home/poulet_a/rendu/sudoki-bi
-## 
+##
 ## Made by poulet_a
 ## Login   <poulet_a@epitech.net>
-## 
+##
 ## Started on  Fri Feb 28 20:13:33 2014 poulet_a
-## Last update Fri Feb 28 21:06:22 2014 poulet_a
+## Last update Fri Feb 28 21:25:12 2014 ghukas_g
 ##
 
 CC	=	cc
@@ -16,7 +16,8 @@ CFLAGS	+=	-Wall -Wextra -Wextra -pedantic
 
 NAME	=	bin/sudoki-bi
 
-SRCS	=	src/main.c
+SRCS	=	src/main.c \
+		src/get_next_line.c
 
 OBJS	=	$(SRCS:.c=.o)
 
