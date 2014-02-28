@@ -1,11 +1,11 @@
 /*
 ** elementary.c for  in /home/poulet_a/projets/sudoki-bi/src
-** 
+**
 ** Made by poulet_a
 ** Login   <poulet_a@epitech.net>
-** 
+**
 ** Started on  Fri Feb 28 21:55:42 2014 poulet_a
-** Last update Fri Feb 28 22:13:25 2014 poulet_a
+** Last update Fri Feb 28 23:14:36 2014 ghukas_g
 */
 
 unsigned char	n_not_one_line(unsigned char grid[9][9],
@@ -61,4 +61,3 @@ unsigned char	n_not_one_square(unsigned char grid[9][9],
     }
   return (1);
 }
-

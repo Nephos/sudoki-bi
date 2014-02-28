@@ -12,13 +12,13 @@
 #include "ret.h"
 #include "get_next_line.h"
 
-char			**read_grille();
+char			read_grille(char tab[9][9]);
 
 int		main()
 {
-  char		**tab;
+  char		tab[9][9];
 
-  if ((tab = read_grille()) == NULL)
+  if ((read_grille(tab)) == -1)
     return (-1);
   return (0);
 }

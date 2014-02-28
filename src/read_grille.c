@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Fri Feb 28 22:58:30 2014 ghukas_g
+** Last update Fri Feb 28 23:39:23 2014 ghukas_g
 */
 
 #include <stdlib.h>
@@ -18,47 +18,48 @@ typedef unsigned char t_uchar;
 
 # define IS_NUM(nb)	(((nb) < '0' || (nb) > '9') ? (-1) : (0))
 
-char			*check_line(char *line)
+char			check_line(char *line, char tab[9])
 {
   t_uchar		i;
   t_uchar		j;
-  char			*tab;
 
-  RET_NULL_NULL((tab = malloc(sizeof(char) * 9)));
   if (strncmp(line, "| ", 2) != 0)
-    return (NULL);
+    return (-1);
   i = 2;
   j = 0;
   while (i < 20)
     {
       if (IS_NUM(line[i]) == -1)
-	return (NULL);
+	{
+	  if (line[i] == ' ')
+	    line[i] = '0';
+	  else
+	    return (-1);
+	}
       tab[j] = line[i] - '0';
       i = i + 2;
       j = j + 1;
     }
-  return((line[i - 1] == '|') ? (tab) : (NULL));
+  return((line[i - 1] == '|') ? (0) : (-1));
 }
 
-char			**read_grille()
+char			read_grille(char tab[9][9])
 {
   t_uchar		i;
-  char			**tab;
   char			*line;
 
-  RET_NULL_NULL((tab = malloc(sizeof(char *) * 9)));
-  RET_NULL_NULL((line = get_next_line(0)));
+  RET_NULL_LONE((line = get_next_line(0)));
   if (strcmp(line, "|------------------|") != 0)
-    return (NULL);
+    return (-1);
   i = 0;
   while (i < 9)
     {
-      RET_NULL_NULL((line = get_next_line(0)));
-      RET_NULL_NULL((tab[i] = check_line(line)));
+      RET_NULL_LONE((line = get_next_line(0)));
+      RET_LONE_LONE((check_line(line, tab[i])));
       i = i + 1;
     }
-  RET_NULL_NULL((line = get_next_line(0)));
+  RET_NULL_LONE((line = get_next_line(0)));
   if (strcmp(line, "|------------------|") != 0)
-    return (NULL);
-  return (tab);
+    return (-1);
+  return (0);
 }
