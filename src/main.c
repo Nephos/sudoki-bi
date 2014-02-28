@@ -17,8 +17,6 @@ char			**read_grille();
 int		main()
 {
   char		**tab;
-  int		i;
-  int		j;
 
   if ((tab = read_grille()) == NULL)
     return (-1);
