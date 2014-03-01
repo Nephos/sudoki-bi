@@ -21,6 +21,7 @@ void	aff_grid(char grid[9][9])
   char	x;
 
   y = 0;
+  printf("    0 1 2 3 4 5 6 7 8\n");
   while (y < 9)
     {
       x = 0;
@@ -38,10 +39,11 @@ void	aff_grid(char grid[9][9])
 int	main()
 {
   char	tab[9][9];
+  char	ret;
 
   if ((read_grid(tab)) == -1)
     return (-1);
-  valid_grid(tab, 0, 0);
+  ret = valid_grid(tab, 0, 0);
   aff_grid(tab);
-  return (0);
+  return (ret^1);
 }
