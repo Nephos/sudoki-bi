@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sat Mar  1 00:05:08 2014 poulet_a
+** Last update Sat Mar  1 01:41:47 2014 ghukas_g
 */
 
 #include <stdlib.h>
@@ -48,7 +48,7 @@ char	read_grid(char tab[9][9])
 
   RET_NULL_LONE((line = get_next_line(0)));
   if (strcmp(line, "|------------------|") != 0)
-    return (-1);
+    return (42);
   i = 0;
   while (i < 9)
     {

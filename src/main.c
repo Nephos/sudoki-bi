@@ -15,26 +15,24 @@
 
 char	read_grid(char tab[9][9]);
 
-void	aff_grid(char grid[9][9])
+void	aff_grid(char grid[9][9], int i)
 {
   char	y;
   char	x;
 
   y = 0;
+  if (i != 0)
+    printf("####################\n");
   printf("|------------------|\n");
   while (y < 9)
     {
       x = 0;
-      printf("| ",y);
+      printf("| ");
       while (x < 9)
 	{
-	  if (x < 8)
-	    printf("%d ", grid[y][x]);
-	  else
-	    printf("%d", grid[y][x]);
+	  printf((x < 8) ? "%d " : "%d|\n", grid[y][x]);
 	  x++;
 	}
-      printf("|\n");
       y++;
     }
   printf("|------------------|\n");
@@ -44,11 +42,19 @@ int	main()
 {
   char	tab[9][9];
   char	ret;
+  char	ret_read;
+  int	i;
 
-  if ((read_grid(tab)) == -1)
-    return (-1);
-  ret = valid_grid(tab, 0, 0);
-  if (ret)
-    aff_grid(tab);
+  i = 0;
+  ret_read = 0;
+  while (ret_read != 42)
+    {
+      if ((ret_read = read_grid(tab)) == -1)
+	return (-1);
+      ret = valid_grid(tab, 0, 0);
+      if (ret)
+	aff_grid(tab, i);
+      i = i + 1;
+    }
   return (ret^1);
 }
