@@ -28,10 +28,13 @@ void	aff_grid(char grid[9][9])
       printf("| ",y);
       while (x < 9)
 	{
-	  printf("%d ", grid[y][x]);
+	  if (x < 8)
+	    printf("%d ", grid[y][x]);
+	  else
+	    printf("%d", grid[y][x]);
 	  x++;
 	}
-      printf("\b|\n");
+      printf("|\n");
       y++;
     }
   printf("|------------------|\n");
