@@ -25,7 +25,7 @@ void	aff_grid(char grid[9][9])
   while (y < 9)
     {
       x = 0;
-      printf("| ",y);
+      printf("| ", y);
       while (x < 9)
 	{
 	  if (x < 8)

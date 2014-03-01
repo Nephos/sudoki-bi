@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 21:55:42 2014 poulet_a
-** Last update Sat Mar  1 01:14:30 2014 poulet_a
+** Last update Sat Mar  1 01:41:08 2014 poulet_a
 */
 
 #include "ret.h"
@@ -49,10 +49,8 @@ char	n_not_in_square(char grid[9][9],
   char	py;
   char	px;
 
-  //  (x > 5) ? (x = 6) : ((x > 2) ? (x = 3) : (x));
-  //  (y > 5) ? (y = 6) : ((y > 2) ? (y = 3) : (y));
-  x = x - (x % 3);
-  y = y - (y % 3);
+  x = x - x % 3;
+  y = y - y % 3;
   px = x;
   py = y;
   i = 0;
