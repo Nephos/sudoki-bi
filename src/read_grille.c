@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sat Mar  1 06:18:08 2014 poulet_a
+** Last update Sat Mar  1 06:25:50 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -22,7 +22,7 @@ char	check_line(char *line, char tab[9])
   char	j;
 
   if (strncmp(line, "| ", 2) != 0)
-    return (42);
+    return (-1);
   i = 2;
   j = 0;
   while (i < 20)
