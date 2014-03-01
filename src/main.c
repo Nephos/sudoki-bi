@@ -51,10 +51,13 @@ int	main()
     {
       if ((ret_read = read_grid(tab)) == -1)
 	return (-1);
-      ret = valid_grid(tab, 0, 0);
-      if (ret)
-	aff_grid(tab, i);
-      i = i + 1;
+      if (ret_read != 42)
+	{
+	  ret = valid_grid(tab, 0, 0);
+	  if (ret)
+	    aff_grid(tab, i);
+	  i = i + 1;
+	}
     }
   if (ret^1)
     printf("Erreur durant la lecture de la grille\n");
