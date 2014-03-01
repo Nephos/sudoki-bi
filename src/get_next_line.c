@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Wed Dec  4 15:33:44 2013 ghukas_g
-** Last update Wed Dec  4 17:52:04 2013 ghukas_g
+** Last update Sat Mar  1 01:43:08 2014 poulet_a
 */
 
 #include	<stdlib.h>
@@ -38,7 +38,6 @@ static char	*my_cat_line(char *dest, char src[SIZE_BUFFER + 1],
   *start = *start + ind + 1;
   return (tmp);
 }
-
 
 char		*get_next_line(const int fd)
 {

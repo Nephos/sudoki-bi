@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 ** 
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Sat Mar  1 01:20:52 2014 poulet_a
+** Last update Sat Mar  1 01:40:56 2014 poulet_a
 */
 
 #include "elementary.h"
@@ -14,7 +14,6 @@ char	valid_grid(char grid[9][9], char y, char x)
 {
   int	n;
 
-  //  printf("y : %d | x : %d & %d\n", y, x, grid[y][x]);
   if (grid[y][x] != 0)
     return (valid_grid(grid, ((x + 1) == 9) ? (y + 1) : (y), (x + 1) % 9));
   n = 1;
@@ -30,7 +29,6 @@ char	valid_grid(char grid[9][9], char y, char x)
 	}
       n++;
     }
-  //printf("invalid %d %d, %d\n", y, x, grid[y][x]);
   grid[y][x] = 0;
   return (0);
 }

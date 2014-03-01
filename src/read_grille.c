@@ -5,7 +5,11 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
+<<<<<<< HEAD
 ** Last update Sat Mar  1 01:41:47 2014 ghukas_g
+=======
+** Last update Sat Mar  1 01:39:18 2014 poulet_a
+>>>>>>> 338fbfea34906d813574ad4bea1f233a3f586106
 */
 
 #include <stdlib.h>
@@ -38,7 +42,7 @@ char	check_line(char *line, char tab[9])
       i = i + 2;
       j = j + 1;
     }
-  return((line[i - 1] == '|') ? (0) : (-1));
+  return ((line[i - 1] == '|') ? (0) : (-1));
 }
 
 char	read_grid(char tab[9][9])
