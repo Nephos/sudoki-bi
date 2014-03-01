@@ -56,5 +56,7 @@ int	main()
 	aff_grid(tab, i);
       i = i + 1;
     }
+  if (ret^1)
+    printf("Erreur durant la lecture de la grille\n");
   return (ret^1);
 }
