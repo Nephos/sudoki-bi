@@ -31,7 +31,7 @@ void	aff_grid(char grid[9][9])
 	  printf("%d ", grid[y][x]);
 	  x++;
 	}
-      printf("|\n");
+      printf("\b|\n");
       y++;
     }
   printf("|------------------|\n");
