@@ -45,7 +45,7 @@ int	main()
   if ((read_grid(tab)) == -1)
     return (-1);
   ret = valid_grid(tab, 0, 0);
-  if (ret^1)
+  if (ret)
     aff_grid(tab);
   return (ret^1);
 }
