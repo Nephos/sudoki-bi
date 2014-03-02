@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sun Mar  2 16:27:52 2014 poulet_a
+** Last update Sun Mar  2 16:39:22 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -35,11 +35,13 @@ char	test_entire_grid(char grid[9][9])
   return (1);
 }
 
-void	aff_grid(char grid[9][9], int i)
+void	aff_grid(char grid[9][9], int i, char valid)
 {
   char	y;
   char	x;
 
+  if (valid == 0)
+    return (printf("Grille invalide\n"));
   y = 0;
   if (i != 0)
     printf("####################\n");

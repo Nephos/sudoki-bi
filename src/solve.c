@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Sun Mar  2 16:17:37 2014 poulet_a
+** Last update Sun Mar  2 17:32:41 2014 poulet_a
 */
 
 #include "solve.h"
@@ -41,7 +41,8 @@ char	valid_grid(char grid[9][9], char y, char x, char mode)
 		aff_grid(grid, y, x, mode);
 	      return (mode^1);
 	    }
-	  if (valid_grid(grid, ((x + 1) == 9) ? (y + 1) : (y), (x + 1) % 9, mode))
+	  if (valid_grid(grid, ((x + 1) == 9) ? (y + 1)
+			 : (y), (x + 1) % 9, mode))
 	    return (1);
 	}
       n++;
