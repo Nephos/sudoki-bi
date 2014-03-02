@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sun Mar  2 15:06:46 2014 poulet_a
+** Last update Sun Mar  2 20:20:53 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -15,11 +15,36 @@
 #include "get_next_line.h"
 #include "read_grid.h"
 
-void	aff_grid(char grid[9][9], int i)
+char	test_entire_grid(char grid[9][9])
 {
   char	y;
   char	x;
 
+  y = 0;
+  while (y < 9)
+    {
+      x = 0;
+      while (x < 9)
+	{
+	  if (grid[y][x] && n_valid(grid, y, x, grid[y][x]) > 3)
+	    return (0);
+	  x++;
+	}
+      y++;
+    }
+  return (1);
+}
+
+void	aff_grid(char grid[9][9], int i, char valid)
+{
+  char	y;
+  char	x;
+
+  if (valid == 0)
+    {
+      printf("Grille invalide\n");
+      return;
+    }
   y = 0;
   if (i != 0)
     printf("####################\n");

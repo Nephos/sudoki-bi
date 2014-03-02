@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 21:23:14 2014 poulet_a
-** Last update Fri Feb 28 22:19:58 2014 ghukas_g
+** Last update Sun Mar  2 20:25:19 2014 poulet_a
 */
 
 #ifndef RET_H_
@@ -14,6 +14,8 @@
 # define LONE			-1
 # define ONE			1
 # define ZERO			0
+
+# define TWO_ZERO(x, y)		(x = (y = (0)))
 
 # define RET_NULL_X(ptr, v)	if (ptr == NULL) return (v)
 # define RET_NULL_NULL(ptr)	if (ptr == NULL) return (NULL)

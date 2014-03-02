@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 ** 
 ** Started on  Fri Feb 28 20:16:09 2014 poulet_a
-** Last update Sun Mar  2 20:12:15 2014 poulet_a
+** Last update Sun Mar  2 20:24:51 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -22,8 +22,7 @@ int	main()
   char	ret_read;
   int	i;
 
-  i = 0;
-  ret_read = 0;
+  TWO_ZERO(i, ret_read);
   while (ret_read != 42)
     {
       if ((ret_read = read_grid(tab)) == -1)
@@ -31,10 +30,7 @@ int	main()
       if (ret_read != 42)
 	{
 	  ret = valid_grid(tab, 0, 0);
-	  if (ret)
-	    aff_grid(tab, i);
-	  else
-	    printf("Grille invalide\n");
+	  aff_grid(tab, i, ret);
 	  i = 1;
 	}
     }
