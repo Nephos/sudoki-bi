@@ -1,18 +1,18 @@
 /*
 ** solve.c for  in /home/poulet_a/projets/sudoki-bi
-** 
+**
 ** Made by poulet_a
 ** Login   <poulet_a@epitech.net>
-** 
+**
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Sat Mar  1 06:16:32 2014 poulet_a
+** Last update Sun Mar  2 15:22:30 2014 ghukas_g
 */
 
 #include "elementary.h"
 
 char	valid_grid(char grid[9][9], char y, char x)
 {
-  int	n;
+  char	n;
 
   if (grid[y][x] != 0)
     {

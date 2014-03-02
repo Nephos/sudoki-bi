@@ -33,6 +33,8 @@ int	main()
 	  ret = valid_grid(tab, 0, 0);
 	  if (ret)
 	    aff_grid(tab, i);
+	  else
+	    printf("Grille invalide\n");
 	  i = 1;
 	}
     }
