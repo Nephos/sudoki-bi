@@ -1,21 +1,25 @@
 /*
 ** solve.c for  in /home/poulet_a/projets/sudoki-bi
-** 
+**
 ** Made by poulet_a
 ** Login   <poulet_a@epitech.net>
-** 
+**
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Sat Mar  1 01:40:56 2014 poulet_a
+** Last update Sat Mar  1 04:32:52 2014 ghukas_g
 */
 
 #include "elementary.h"
 
 char	valid_grid(char grid[9][9], char y, char x)
 {
-  int	n;
+  char	n;
 
   if (grid[y][x] != 0)
-    return (valid_grid(grid, ((x + 1) == 9) ? (y + 1) : (y), (x + 1) % 9));
+    {
+      if (y == 8 && x == 8)
+	return (1);
+      return (valid_grid(grid, ((x + 1) == 9) ? (y + 1) : (y), (x + 1) % 9));
+    }
   n = 1;
   while (n <= 9)
     {
