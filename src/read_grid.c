@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sun Mar  2 16:11:48 2014 poulet_a
+** Last update Sun Mar  2 16:27:52 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -15,7 +15,7 @@
 #include "get_next_line.h"
 #include "read_grid.h"
 
-char	test_entire_grid(char tab[9][9])
+char	test_entire_grid(char grid[9][9])
 {
   char	y;
   char	x;
@@ -26,7 +26,7 @@ char	test_entire_grid(char tab[9][9])
       x = 0;
       while (x < 9)
 	{
-	  if (n_valid(tab, y, x, grid[y][x]) > 3)
+	  if (grid[y][x] && n_valid(grid, y, x, grid[y][x]) > 3)
 	    return (0);
 	  x++;
 	}
@@ -83,7 +83,7 @@ char	check_line(char *line, char tab[9])
   return ((line[i - 1] == '|') ? (0) : (-1));
 }
 
-char	read_grid(char tab[9][9])
+char	read_grid(char grid[9][9])
 {
   char	i;
   char	*line;
@@ -96,7 +96,7 @@ char	read_grid(char tab[9][9])
   while (i < 9)
     {
       RET_NULL_LONE((line = get_next_line(0)));
-      RET_LONE_LONE((check_line(line, tab[i])));
+      RET_LONE_LONE((check_line(line, grid[i])));
       free(line);
       i = i + 1;
     }

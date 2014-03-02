@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 21:55:42 2014 poulet_a
-** Last update Sun Mar  2 16:09:58 2014 poulet_a
+** Last update Sun Mar  2 16:27:15 2014 poulet_a
 */
 
 #include "ret.h"
@@ -39,7 +39,7 @@ char	n_not_in_column(char grid[9][9],
   occ = 0;
   while (i < 9)
     {
-      if (grid[y][i] == n)
+      if (grid[i][x] == n)
 	occ++;
       i++;
     }
@@ -73,6 +73,12 @@ char	n_not_in_square(char grid[9][9],
   return (occ);
 }
 
+/*
+**   printf("n %d\n", n);
+**  printf("square %d\n", n_not_in_square(grid, y, x, n));
+**  printf("column %d\n", n_not_in_column(grid, x, n));
+**  printf("line %d\n", n_not_in_line(grid, y, n));
+*/
 char	n_valid(char grid[9][9],
 		char y,
 		char x,
