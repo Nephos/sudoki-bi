@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Sun Mar  2 15:22:30 2014 ghukas_g
+** Last update Sun Mar  2 16:12:40 2014 poulet_a
 */
 
 #include "elementary.h"
@@ -18,7 +18,7 @@ char	valid_grid(char grid[9][9], char y, char x)
     {
       if (y == 8 && x == 8)
 	return (1);
-      return (valid_grid(grid, ((x + 1) == 9) ? (y + 1) : (y), (x + 1) % 9));
+      return (valid_grid(grid, ((x + 1) == 9) ? (y + 1) : (y), (x + 1) % 9) == 0);
     }
   n = 1;
   while (n <= 9)

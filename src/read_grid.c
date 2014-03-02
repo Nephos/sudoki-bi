@@ -5,7 +5,7 @@
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sun Mar  2 15:06:46 2014 poulet_a
+** Last update Sun Mar  2 16:11:48 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -14,6 +14,26 @@
 #include "ret.h"
 #include "get_next_line.h"
 #include "read_grid.h"
+
+char	test_entire_grid(char tab[9][9])
+{
+  char	y;
+  char	x;
+
+  y = 0;
+  while (y < 9)
+    {
+      x = 0;
+      while (x < 9)
+	{
+	  if (n_valid(tab, y, x, grid[y][x]) > 3)
+	    return (0);
+	  x++;
+	}
+      y++;
+    }
+  return (1);
+}
 
 void	aff_grid(char grid[9][9], int i)
 {

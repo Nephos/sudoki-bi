@@ -5,7 +5,7 @@
 ** Login   <poulet_a@epitech.net>
 ** 
 ** Started on  Fri Feb 28 20:16:09 2014 poulet_a
-** Last update Sun Mar  2 15:33:43 2014 poulet_a
+** Last update Sun Mar  2 15:53:52 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -28,7 +28,7 @@ int	main()
     {
       if ((ret_read = read_grid(tab)) == -1)
 	return (-1 + i);
-      if (ret_read != 42)
+      if (ret_read != 42 && test_entire_grid(tab))
 	{
 	  ret = valid_grid(tab, 0, 0);
 	  if (ret)
