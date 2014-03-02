@@ -5,7 +5,7 @@
 ## Login   <poulet_a@epitech.net>
 ##
 ## Started on  Fri Feb 28 20:13:33 2014 poulet_a
-## Last update Sat Mar  1 04:36:43 2014 ghukas_g
+## Last update Sun Mar  2 15:23:10 2014 ghukas_g
 ##
 
 CC	=	cc -g
@@ -18,7 +18,7 @@ NAME	=	bin/sudoki-bi
 
 SRCS	=	src/main.c \
 		src/get_next_line.c \
-		src/read_grille.c \
+		src/read_grid.c \
 		src/elementary.c \
 		src/solve.c
 

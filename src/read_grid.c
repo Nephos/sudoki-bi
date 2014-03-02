@@ -1,11 +1,11 @@
 /*
-** read_grille.c for  in /home/ghukas_g/sudoku/src
+** read_grid.c for  in /home/ghukas_g/sudoku/src
 **
 ** Made by ghukas_g
 ** Login   <ghukas_g@epitech.net>
 **
 ** Started on  Fri Feb 28 21:53:43 2014 ghukas_g
-** Last update Sat Mar  1 02:16:09 2014 ghukas_g
+** Last update Sun Mar  2 15:06:46 2014 poulet_a
 */
 
 #include <stdlib.h>
@@ -13,8 +13,30 @@
 #include <stdio.h>
 #include "ret.h"
 #include "get_next_line.h"
+#include "read_grid.h"
 
-# define IS_NUM(nb)	(((nb) < '0' || (nb) > '9') ? (-1) : (0))
+void	aff_grid(char grid[9][9], int i)
+{
+  char	y;
+  char	x;
+
+  y = 0;
+  if (i != 0)
+    printf("####################\n");
+  printf("|------------------|\n");
+  while (y < 9)
+    {
+      x = 0;
+      printf("| ");
+      while (x < 9)
+	{
+	  printf((x < 8) ? "%d " : "%d|\n", grid[y][x]);
+	  x++;
+	}
+      y++;
+    }
+  printf("|------------------|\n");
+}
 
 char	check_line(char *line, char tab[9])
 {
