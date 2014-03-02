@@ -5,13 +5,14 @@
 ## Login   <poulet_a@epitech.net>
 ##
 ## Started on  Fri Feb 28 20:13:33 2014 poulet_a
-## Last update Sun Mar  2 15:08:14 2014 poulet_a
+## Last update Sun Mar  2 15:33:53 2014 poulet_a
 ##
 
-CC	=	cc -g
+CC	=	cc
 
 RM	=	rm -f
 
+CFALGS	+=	-Wall -pedantic
 CFLAGS	+=	-Isrc
 
 NAME	=	bin/sudoki-bi

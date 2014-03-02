@@ -1,10 +1,11 @@
 /*
-** main.c for  in /home/poulet_a/rendu/sudoki-bi
-**
+** main.c for  in /home/poulet_a/projets/sudoki-bi
+** 
 ** Made by poulet_a
 ** Login   <poulet_a@epitech.net>
-**
+** 
 ** Started on  Fri Feb 28 20:16:09 2014 poulet_a
+** Last update Sun Mar  2 15:33:43 2014 poulet_a
 */
 
 #include <stdlib.h>
