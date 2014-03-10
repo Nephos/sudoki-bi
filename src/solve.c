@@ -5,14 +5,14 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 22:21:17 2014 poulet_a
-** Last update Sun Mar  2 15:22:30 2014 ghukas_g
+** Last update Mon Mar  3 16:18:22 2014 poulet_a
 */
 
 #include "elementary.h"
 
-char	valid_grid(char grid[9][9], char y, char x)
+char		valid_grid(char grid[9][9], char y, char x)
 {
-  char	n;
+  register char	n;
 
   if (grid[y][x] != 0)
     {

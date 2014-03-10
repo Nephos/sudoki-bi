@@ -5,16 +5,16 @@
 ** Login   <poulet_a@epitech.net>
 **
 ** Started on  Fri Feb 28 21:55:42 2014 poulet_a
-** Last update Sat Mar  1 01:41:08 2014 poulet_a
+** Last update Mon Mar  3 16:18:54 2014 poulet_a
 */
 
 #include "ret.h"
 
-char	n_not_in_line(char grid[9][9],
-		      char y,
-		      char n)
+char		n_not_in_line(char grid[9][9],
+			      char y,
+			      char n)
 {
-  char	i;
+  register char	i;
 
   i = 0;
   while (i < 9)
@@ -25,11 +25,11 @@ char	n_not_in_line(char grid[9][9],
   return (1);
 }
 
-char	n_not_in_column(char grid[9][9],
-			char x,
-			char n)
+char		n_not_in_column(char grid[9][9],
+				char x,
+				char n)
 {
-  char	i;
+  register char	i;
 
   i = 0;
   while (i < 9)
@@ -40,14 +40,14 @@ char	n_not_in_column(char grid[9][9],
   return (1);
 }
 
-char	n_not_in_square(char grid[9][9],
-			char y,
-			char x,
-			char n)
+char		n_not_in_square(char grid[9][9],
+				char y,
+				char x,
+				char n)
 {
-  char	i;
-  char	py;
-  char	px;
+  register char	i;
+  register char	py;
+  register char	px;
 
   x = x - x % 3;
   y = y - y % 3;
